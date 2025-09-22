@@ -51,16 +51,21 @@ async function generateMockDriver(geofenceData, latitude, longitude) {
     }),
     prompt,
     });
+
+    return result;
 }
 
 export const mockuser = async (req, res) => {
+  console.log(req.body)
   const { latitude, longitude, geofence } = req.body;
   if (!latitude || !longitude || !geofence) {
     return res.status(400).json({ error: "Missing required parameters" });
   }
+  console.log(geofence.features[0].geometry)
   // For simplicity, returning a static user object
   // In a real implementation, you would call generateMockDriver and return its result
-  const users = await generateMockDriver(geofence, latitude, longitude);
+  const users = await generateMockDriver(geofence.features[0].geometry, latitude, longitude);
+  console.log(users)
   return res.json(users);  
   
 };
