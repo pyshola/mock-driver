@@ -1,6 +1,6 @@
-import prompt from "./prompts";
+import { prompt } from "./prompts.js";
 import { z } from "zod";
-import { coordinate } from "./tools";
+import { coordinate } from "./tools.js";
 import { google } from "@ai-sdk/google";
 import { stepCountIs, tool, generateObject, streamObject } from "ai";
 

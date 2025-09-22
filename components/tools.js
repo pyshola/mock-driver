@@ -1,4 +1,5 @@
-
+import { z } from "zod";
+import { tool } from "ai";
 const coordinateSchema = z.object({
   type: z.enum(["Point"]),
   coordinates: z.array(z.number()),

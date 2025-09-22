@@ -1,4 +1,4 @@
-export default prompt: `Generate mock users with name, email, phone number, address, latitude, longitude within the geofence area in the city. Return the response in the following array of JSON format:
+export const prompt = `Generate mock users with name, email, phone number, address, latitude, longitude within the geofence area in the city. Return the response in the following array of JSON format:
                 [
                     {
                       "name": "John Doe",
@@ -45,4 +45,4 @@ export default prompt: `Generate mock users with name, email, phone number, addr
                     2. **Relevance** – Ensure the coordinates are within the geofence area.
                     3. **Diversity** – Ensure a variety of coordinates within the geofence area.
                     4. **Realism** – Ensure the coordinates represent real-world locations on roads.
-                    5. **Compliance** – Ensure the coordinates adhere to the specified format and constraints.`,
+                    5. **Compliance** – Ensure the coordinates adhere to the specified format and constraints.`
