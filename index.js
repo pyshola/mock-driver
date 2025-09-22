@@ -1,5 +1,5 @@
-const express = require("express");
-import api from './src/api.js';
+import express, { Router } from 'express';;
+import {mockuser} from "./components/mockuser";
 const app = express();
 const port = 3000;
 

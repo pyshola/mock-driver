@@ -53,7 +53,7 @@ async function generateMockDriver(geofenceData, latitude, longitude) {
     });
 }
 
-export default mockuser = async (req, res) => {
+export const mockuser = async (req, res) => {
   const { latitude, longitude, geofence } = req.body;
   if (!latitude || !longitude || !geofence) {
     return res.status(400).json({ error: "Missing required parameters" });
