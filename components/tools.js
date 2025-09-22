@@ -1,7 +1,4 @@
-const locationSchema = z.object({
-  type: z.enum(["Polygon"]),
-  coordinates: z.array(z.array(z.array(z.number()))),
-});
+
 const coordinateSchema = z.object({
   type: z.enum(["Point"]),
   coordinates: z.array(z.number()),
