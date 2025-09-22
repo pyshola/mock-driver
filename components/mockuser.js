@@ -17,7 +17,7 @@ async function generateMockDriver(geofenceData, latitude, longitude) {
       geofence: tool({
         description: "Pick coordinates within the polygon area ",
         inputSchema: locationSchema,
-        execute: geofenceData.location,
+        execute: geofenceData.coordinates,
       }),
     },
     schema: z.object({
